@@ -1,3 +1,11 @@
+@font-face {
+  font-family: 'Outfit';
+  src: url('../fonts/Outfit-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 .s1 {
   width: 428px;
   height: 836px;
@@ -202,7 +210,7 @@
   background: #ffffff;
   border-radius: 24px;
   box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.08); /* Легка тінь для об'єму, як на макеті */
-  padding: 16px 20px;
+  padding: 16px 15px;
   position: relative;
   z-index: 2;
 }
@@ -221,7 +229,7 @@
   color: white;
   margin: 0;
   max-height: 10px;
-  font-weight: 500;
+  font-weight: 600;
   padding: 0px 2px;
 }
 
@@ -317,7 +325,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 32px;
+  gap: 15px;
   z-index: 10;
 }
 
@@ -406,6 +414,149 @@
 }
 
 .s1-avatars img:last-child { margin-right: 0; }
+
+
+
+
+
+
+
+.v-timer-section {
+  width: 428px;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+.v-timer-banner {
+  width: 380px;
+  padding: 14px;
+  background: linear-gradient(90deg, #FD7382 0%, #F83A4F 100%);
+  box-shadow: 0px -3px 14.9px rgba(0, 0, 0, 0.08);
+  border-radius: 24px;
+  outline: 2px solid #FF929E;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  box-sizing: border-box;
+}
+
+.v-timer-text-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  text-align: center;
+}
+
+.v-timer-subtitle {
+  color: white;
+  font-size: 16px;
+  font-family: 'Source Sans 3', sans-serif;
+  font-weight: 600;
+  line-height: 14px;
+}
+
+.v-timer-title {
+  color: white;
+  font-size: 24px;
+  font-family: 'Anton', sans-serif;
+  font-weight: 400;
+  line-height: 36.02px;
+  text-transform: uppercase;
+}
+
+.v-timer-display {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+}
+
+.v-timer-box {
+  width: 67px;
+  height: 38px;
+  background: white;
+  border-radius: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Згідно з Figma центральний блок трохи ширший */
+.v-timer-box:nth-child(2) {
+  width: 73px;
+}
+
+.v-timer-val {
+  color: black;
+  font-size: 20px;
+  font-family: 'Source Sans 3', sans-serif;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+
+/* Тільки адаптив для пікселів у vw */
+@media (max-width: 480px) {
+  .v-timer-section {
+    width: 100vw;
+  }
+  
+  .v-timer-banner {
+    width: 88.79vw;
+    padding: 3.27vw;
+    box-shadow: 0vw -0.7vw 3.48vw rgba(0, 0, 0, 0.08);
+    border-radius: 5.61vw;
+    outline-width: 0.47vw;
+    gap: 3.27vw;
+  }
+  
+  .v-timer-text-group {
+    gap: 1.87vw;
+  }
+  
+  .v-timer-subtitle {
+    font-size: 3.74vw;
+    line-height: 3.27vw;
+  }
+  
+  .v-timer-title {
+    font-size: 5.61vw;
+    line-height: 8.42vw;
+  }
+  
+  .v-timer-display {
+    gap: 3.27vw;
+  }
+  
+  .v-timer-box {
+    width: 15.65vw;
+    height: 8.88vw;
+    border-radius: 35.05vw;
+  }
+  
+  .v-timer-box:nth-child(2) {
+    width: 17.06vw;
+  }
+  
+  .v-timer-val {
+    font-size: 4.67vw;
+    line-height: 4.67vw;
+  }
+}
+
+
+
+
+
 
 .s2 {
   width: 428px;
@@ -565,6 +716,29 @@
 }
 
 .s2-pill-arrow { width: 20px; height: 20px; flex-shrink: 0; }
+
+.s2-toggle {
+  cursor: pointer;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.s2-toggle .s2-pill-arrow { transition: transform 0.3s ease; }
+
+.s2-toggle.collapsed .s2-pill-arrow { transform: rotate(180deg); }
+
+/* margin-bottom: -gap компенсує gap групи, щоб у згорнутому стані не лишалось відступу; від початку сховано */
+.s2-collapse {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: -8px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+
+.s2-collapse > .s2-row:last-child { margin-bottom: 8px; }
 
 /* s2-b.webp містить плашку ALL GUIDES & TOOLS INCLUDED + 3 картки з тінями */
 .s2-guides {
@@ -795,6 +969,39 @@
 
 .st8-footer-text { text-align: center; color: black; font-size: 16px; font-family: 'Source Sans 3', sans-serif; font-weight: 400; line-height: 20px; padding: 0 10px; }
 
+.st-guarantee {
+  width: 428px;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 45px 24px;
+  box-sizing: border-box;
+}
+
+.st-guarantee-card {
+  width: 100%;
+  padding: 24px 14px;
+  box-sizing: border-box;
+  background: linear-gradient(90deg, #FD7382 0%, #F83A4F 100%);
+  border-radius: 12px;
+  outline: 3px rgba(255, 255, 255, 0.12) solid;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.st-guarantee-img { width: 81px; height: auto; flex-shrink: 0; display: block; }
+
+.st-guarantee-content { width: 262px; display: flex; flex-direction: column; justify-content: center; gap: 8px; }
+
+.st-guarantee-title { color: white; font-size: 32px; font-family: 'Outfit', sans-serif; font-weight: 700; text-transform: uppercase; line-height: 1.26; }
+
+.st-guarantee-text { color: white; font-size: 14px; font-family: 'Source Sans 3', sans-serif; font-weight: 400; line-height: 1.26; }
+
+.st-guarantee-text b { font-weight: 700; }
+
 .st11 {
   width: 428px;
   background: white;
@@ -954,7 +1161,7 @@
 
 .footerButton-new:active { opacity: 0.8; }
 
-.btn-text-large { color: white; font-size: 19px; font-family: 'Onest', sans-serif; font-weight: 700; text-transform: capitalize; letter-spacing: 1.52px; white-space: nowrap; }
+.btn-text-large { color: white; font-size: 24px; font-family: 'Anton', sans-serif; font-weight: 400; text-transform: capitalize; letter-spacing: 1.52px; white-space: nowrap; }
 
 /* ── Modal ── */
 
@@ -1345,7 +1552,7 @@
   .v1-card {
     border-radius: 5.61vw;
     box-shadow: 0vw 1.87vw 7.01vw rgba(0, 0, 0, 0.08);
-    padding: 3.74vw 4.67vw;
+    padding: 3.74vw;
   }
   .v1-card p {
     font-size: 3.74vw;
@@ -1399,7 +1606,6 @@
     width: 100vw;
     top: 148.6vw;
     padding-bottom: 10.51vw;
-    gap: 7.48vw;
   }
   .s1-features {
     width: 88.79vw;
@@ -1517,6 +1723,13 @@
   .s2-pill-arrow {
     width: 4.67vw;
     height: 4.67vw;
+  }
+  .s2-collapse {
+    gap: 1.87vw;
+    margin-bottom: -1.87vw;
+  }
+  .s2-collapse > .s2-row:last-child {
+    margin-bottom: 1.87vw;
   }
   .s2-guides {
     width: 91.12vw;
@@ -1765,6 +1978,28 @@
     line-height: 4.67vw;
     padding: 0 2.34vw;
   }
+  .st-guarantee {
+    width: 100vw;
+    padding: 10.51vw 5.61vw;
+  }
+  .st-guarantee-card {
+    padding: 5.61vw 3.27vw;
+    border-radius: 2.8vw;
+    outline-width: 0.7vw;
+  }
+  .st-guarantee-img {
+    width: 18.93vw;
+  }
+  .st-guarantee-content {
+    width: 61.21vw;
+    gap: 1.87vw;
+  }
+  .st-guarantee-title {
+    font-size: 7.48vw;
+  }
+  .st-guarantee-text {
+    font-size: 3.27vw;
+  }
   .st11 {
     width: 100vw;
     padding: 9.35vw 5.61vw;
@@ -1939,7 +2174,6 @@
     gap: 2.34vw;
   }
   .btn-text-large {
-    font-size: 4.44vw;
     letter-spacing: 0.36vw;
   }
   .modal-overlay {

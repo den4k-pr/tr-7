@@ -23,3 +23,29 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     });
   });
+// Плашки s2 (Mobility + Flexibility, Strength): згортають/розгортають картки своєї групи
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.s2-toggle').forEach(function(pill) {
+      var wrapper = pill.parentElement.querySelector('.s2-collapse');
+      if (!wrapper) return;
+
+      // Після розгортання знімаємо обмеження, щоб висота підлаштовувалась під ресайз (vw)
+      wrapper.addEventListener('transitionend', function(e) {
+        if (e.propertyName === 'max-height' && !pill.classList.contains('collapsed')) {
+          wrapper.style.maxHeight = 'none';
+        }
+      });
+
+      pill.addEventListener('click', function() {
+        if (pill.classList.contains('collapsed')) {
+          pill.classList.remove('collapsed');
+          wrapper.style.maxHeight = wrapper.scrollHeight + "px";
+        } else {
+          pill.classList.add('collapsed');
+          wrapper.style.maxHeight = wrapper.scrollHeight + "px";
+          wrapper.offsetHeight; // reflow, щоб анімація стартувала з поточної висоти
+          wrapper.style.maxHeight = '0px';
+        }
+      });
+    });
+  });

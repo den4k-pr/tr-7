@@ -20,7 +20,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Onest:wght@400;600&family=Source+Sans+3:wght@400;500;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="./css-t2/nullStyle.css">
-  <link rel="stylesheet" href="./css-t2/main.css?v=3">
+  <link rel="stylesheet" href="./css-t2/main.css?v=4">
  
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
@@ -108,7 +108,7 @@ src="https://www.facebook.com/tr?id=1102546968959829&ev=PageView&noscript=1"
   <!-- Заголовок (Figma) -->
   <div class="s1-header">
     <div class="s1-title">
-      <span class="c-red">ALL </span><span class="c-black">My</span><span class="c-red"> Programs <br/>for </span><span class="c-red">just</span><span class="c-black"> </span><span class="c-red">€1</span>
+      <span class="c-red">ALL </span><span class="c-black">My</span><span class="c-black"> Programs <br/>for </span><span class="c-red">just</span><span class="c-black"> </span><span class="c-red">€1</span>
     </div>
     <div class="s1-subtitle">You will Never See this price again</div>
   </div>
@@ -180,6 +180,20 @@ src="https://www.facebook.com/tr?id=1102546968959829&ev=PageView&noscript=1"
   </div>
 </div>
 
+<div class="v-timer-section">
+  <div class="v-timer-banner">
+    <div class="v-timer-text-group">
+      <div class="v-timer-subtitle">Limited Offer for Just 48 hours</div>
+      <div class="v-timer-title">THIS IS YOUR ONLY 1€ ENTRY CHANCE</div>
+    </div>
+    
+    <div class="v-timer-display" id="v-promo-timer">
+      <div class="v-timer-box"><span class="v-timer-val">47</span></div>
+      <div class="v-timer-box"><span class="v-timer-val">59</span></div>
+      <div class="v-timer-box"><span class="v-timer-val">59</span></div>
+    </div>
+  </div>
+</div>
 
 <div class="s2">
   <!-- Плашка-заголовок -->
@@ -213,32 +227,38 @@ src="https://www.facebook.com/tr?id=1102546968959829&ev=PageView&noscript=1"
 
   <!-- Mobility + Flexibility -->
   <div class="s2-group">
-    <div class="s2-row">
-      <img src="./images-t2/v3/card12.webp" class="s2-card" data-program="beginner-mobility" alt="Beginner mobility">
-      <img src="./images-t2/v3/card3.webp" class="s2-card" data-program="upper-body-mobility" alt="Upper body mobility">
-      <img src="./images-t2/v3/card6.webp" class="s2-card" data-program="only-flexibility" alt="Only flexibility">
+   
+    <div class="s2-collapse">
+      <div class="s2-row">
+        <img src="./images-t2/v3/card12.webp" class="s2-card" data-program="beginner-mobility" alt="Beginner mobility">
+        <img src="./images-t2/v3/card3.webp" class="s2-card" data-program="upper-body-mobility" alt="Upper body mobility">
+        <img src="./images-t2/v3/card6.webp" class="s2-card" data-program="only-flexibility" alt="Only flexibility">
+      </div>
+      <div class="s2-row">
+        <img src="./images-t2/v3/card10.webp" class="s2-card" data-program="upper-body-mobility" alt="Upper body mobility">
+        <img src="./images-t2/v3/card4.webp" class="s2-card" data-program="beginner-mobility-2" alt="Beginner mobility">
+        <img src="./images-t2/v3/card1.webp" class="s2-card" data-program="hip-mobility" alt="Hip mobility">
+      </div>
     </div>
-    <div class="s2-row">
-      <img src="./images-t2/v3/card10.webp" class="s2-card" data-program="upper-body-mobility" alt="Upper body mobility">
-      <img src="./images-t2/v3/card4.webp" class="s2-card" data-program="beginner-mobility-2" alt="Beginner mobility">
-      <img src="./images-t2/v3/card1.webp" class="s2-card" data-program="hip-mobility" alt="Hip mobility">
-    </div>
-    <div class="s2-pill">Mobility + Flexibility<img src="./images-t2/s2-r.webp" class="s2-pill-arrow" alt=""></div>
+     <div class="s2-pill s2-toggle collapsed">Mobility + Flexibility<img src="./images-t2/s2-r.webp" class="s2-pill-arrow" alt=""></div>
   </div>
 
   <!-- Strength -->
   <div class="s2-group">
-    <div class="s2-row">
-      <img src="./images-t2/v3/card11.webp" class="s2-card" data-program="inhomepower-bikini" alt="Inhomepower">
-      <img src="./images-t2/v3/card2.webp" class="s2-card" data-program="powerfit-core" alt="Powerfit core">
-      <img src="./images-t2/v3/card5.webp" class="s2-card" data-program="fit-program" alt="Fit program">
+    
+    <div class="s2-collapse">
+      <div class="s2-row">
+        <img src="./images-t2/v3/card11.webp" class="s2-card" data-program="inhomepower-bikini" alt="Inhomepower">
+        <img src="./images-t2/v3/card2.webp" class="s2-card" data-program="powerfit-core" alt="Powerfit core">
+        <img src="./images-t2/v3/card5.webp" class="s2-card" data-program="fit-program" alt="Fit program">
+      </div>
+      <div class="s2-row">
+        <img src="./images-t2/v3/card7.webp" class="s2-card" data-program="powerfit-body" alt="Powerfitbody">
+        <img src="./images-t2/v3/card8.webp" class="s2-card" data-program="project-glutes" alt="Inhomepower project glutes">
+        <img src="./images-t2/v3/card9.webp" class="s2-card" data-program="handstand-mastery" alt="Handstand mastery">
+      </div>
     </div>
-    <div class="s2-row">
-      <img src="./images-t2/v3/card7.webp" class="s2-card" data-program="powerfit-body" alt="Powerfitbody">
-      <img src="./images-t2/v3/card8.webp" class="s2-card" data-program="project-glutes" alt="Inhomepower project glutes">
-      <img src="./images-t2/v3/card9.webp" class="s2-card" data-program="handstand-mastery" alt="Handstand mastery">
-    </div>
-    <div class="s2-pill">Strength<img src="./images-t2/s2-r.webp" class="s2-pill-arrow" alt=""></div>
+    <div class="s2-pill s2-toggle collapsed">Strength<img src="./images-t2/s2-r.webp" class="s2-pill-arrow" alt=""></div>
   </div>
 
   <!-- Гайди та інструменти (одна картинка) -->
@@ -676,23 +696,18 @@ src="https://www.facebook.com/tr?id=1102546968959829&ev=PageView&noscript=1"
     <div class="st8-subtitle">Same library. Two ways to own it</div>
   </div>
 
-  <!-- Плашка з питанням -->
-  <div class="st8-question-box">
-    <div class="st8-q-icon">
-      <img src="./images-t2/img4.webp" alt="Q" class="st8-icon-img">
-    </div>
-    <div class="st8-q-text">What You Get After Payment?</div>
-    <div class="st8-avatar-wrap">
-      <img src="./images-t2/img5.webp" class="st8-avatar" alt="Karyna">
-    </div>
-  </div>
-
   <!-- Картка: MEMBERSHIP (Червона) -->
   <div class="st8-card st8-card-red">
     <div class="st8-card-content">
       <div class="st8-plan-title">MEMBERSHIP</div>
       <div class="st8-plan-price"><span>1€</span> /month</div>
-      <div class="st8-plan-desc">Cancel anytime in 2 clicks. No calls, no questions</div>
+
+      <div class="st8-divider">
+       <svg xmlns="http://www.w3.org/2000/svg" width="331" height="1" viewBox="0 0 331 1" fill="none">
+  <path opacity="0.2" d="M0.5 0.5H330.5" stroke="white" stroke-linecap="round"/>
+</svg>
+      </div>
+      <div class="st8-plan-desc">Then €29/month. Cancel anytime.</div>
       
       <!-- Лінія SVG -->
       <div class="st8-divider">
@@ -704,15 +719,15 @@ src="https://www.facebook.com/tr?id=1102546968959829&ev=PageView&noscript=1"
       <div class="st8-features">
         <div class="st8-feature-item">
           <img src="./images-t2/img22.webp" alt="Check" class="st8-check-icon">
-          <div class="st8-feature-text">The full library of Karyna's programs</div>
+          <div class="st8-feature-text">Try the full library of Karyna's programs & guides</div>
         </div>
         <div class="st8-feature-item">
           <img src="./images-t2/img22.webp" alt="Check" class="st8-check-icon">
-          <div class="st8-feature-text">Every NEW release included the day it drops</div>
+          <div class="st8-feature-text">Check every NEW release included </div>
         </div>
         <div class="st8-feature-item">
           <img src="./images-t2/img22.webp" alt="Check" class="st8-check-icon">
-          <div class="st8-feature-text">Community inside</div>
+          <div class="st8-feature-text">Join community inside</div>
         </div>
       </div>
     </div>
@@ -726,6 +741,14 @@ src="https://www.facebook.com/tr?id=1102546968959829&ev=PageView&noscript=1"
     <div class="st8-card-content">
       <div class="st8-plan-title-black">LIFETIME</div>
       <div class="st8-plan-price-black"><span>399€</span> one payment</div>
+
+
+      <div class="st8-divider">
+        <svg width="333" height="1" viewBox="0 0 333 1" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path opacity="0.2" d="M0.5 0.5H332.5" stroke="black" stroke-linecap="round" />
+        </svg>
+      </div>
+
       <div class="st8-plan-desc-black">One payment. Nothing ever renews</div>
       
       <!-- Лінія SVG -->
@@ -738,11 +761,11 @@ src="https://www.facebook.com/tr?id=1102546968959829&ev=PageView&noscript=1"
       <div class="st8-features">
         <div class="st8-feature-item">
           <img src="./images-t2/img21.webp" alt="Check" class="st8-check-icon">
-          <div class="st8-feature-text-black">Every program released to date, yours forever</div>
+          <div class="st8-feature-text-black">Every program & guide releases</div>
         </div>
         <div class="st8-feature-item">
           <img src="./images-t2/img21.webp" alt="Check" class="st8-check-icon">
-          <div class="st8-feature-text-black">Community inside</div>
+          <div class="st8-feature-text-black">Private community access</div>
         </div>
         <div class="st8-feature-item">
           <img src="./images-t2/img21.webp" alt="Check" class="st8-check-icon">
@@ -757,9 +780,20 @@ src="https://www.facebook.com/tr?id=1102546968959829&ev=PageView&noscript=1"
 
   <!-- Нижній текст -->
   <div class="st8-footer-text">
-    Membership includes all future releases. Lifetime covers today's full library, forever.
+    Membership includes all future releases. <br> Lifetime covers today's full library, forever.
   </div>
 
+</div>
+
+<!-- Гарантія -->
+<div class="st-guarantee">
+  <div class="st-guarantee-card">
+    <img src="./images-t2/kkl.png" class="st-guarantee-img" alt="14 days guarantee">
+    <div class="st-guarantee-content">
+      <div class="st-guarantee-title">Guarantee</div>
+      <div class="st-guarantee-text"><b>We offer a 14-day money-back guarantee:</b><br>if the course doesn't meet your expectations, we'll refund your payment. You risk nothing</div>
+    </div>
+  </div>
 </div>
 
 
@@ -1147,9 +1181,9 @@ src="https://www.facebook.com/tr?id=1102546968959829&ev=PageView&noscript=1"
                 <div class="timer-box">55</div>
             </div>
         </div>
-        <p class="footer-text-n">Join Today, Get a Free Bonus Pack</p>
+        <p class="footer-text-n">unlock  full library for price of 1 course</p>
         <button data-href="https://zubalenok.online/shop/item/13460"  class="footerButton-new check-click">
-            <span class="btn-text-large">START MY MEMBERSHIP 1€</span>
+            <span class="btn-text-large">START MY MEMBERSHIP</span>
         </button>
     </footer>
 </div>
@@ -1272,7 +1306,7 @@ src="https://www.facebook.com/tr?id=1102546968959829&ev=PageView&noscript=1"
    
     <script src="./js-t/timer.js?v=2"></script>
     <script src="./js-t/modal.js?v=3"></script>
-    <script src="./js-t/faq.js?v=2"></script>
+    <script src="./js-t/faq.js?v=4"></script>
     <script src="./js-t/video-optimize.js?v=2"></script>
     <script src="./js-t/video-slides.js?v=2"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
