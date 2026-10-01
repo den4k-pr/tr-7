@@ -806,9 +806,12 @@
 
 .s6-swiper { width: 100%; overflow: visible !important; }
 
-.s6-slide {
-  width: 295px !important;
-  height: 524px;
+/* .s6-swiper .s6-slide — щоб перебити .swiper-slide { height: 100% } з swiper-bundle.css, який підключається пізніше.
+   Висота фіксована, ширина — по пропорціях картинки (~1.4 слайда на екран) */
+.s6-swiper .s6-slide {
+  width: auto !important;
+  height: 430px;
+  flex-shrink: 0;
   position: relative;
   cursor: pointer;
   border-radius: 12px;
@@ -821,7 +824,7 @@
   align-items: center;
 }
 
-.s6-img { width: 100%; height: 100%; object-fit: cover; display: block; border-radius: 24px; }
+.s6-img { width: auto; height: 100%; max-width: none; flex: none; object-fit: cover; display: block; border-radius: 24px; }
 
 .swiper-slide, .swiper-slide video { border-radius: 24px !important; overflow: hidden !important; }
 
@@ -1769,9 +1772,8 @@
   .s6-title-sub {
     font-size: 4.21vw;
   }
-  .s6-slide {
-    width: 68.93vw !important;
-    height: 122.43vw;
+  .s6-swiper .s6-slide {
+    height: 100vw;
     border-radius: 2.8vw;
     box-shadow: 0vw 0.47vw 4.67vw rgba(0, 0, 0, 0.20);
   }

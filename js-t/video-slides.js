@@ -2,19 +2,7 @@
   console.log('[VideoSlides] Script initialized for s6');
 
 var VIDEO_MAP = {
-  '1.webp':  'https://itden-cdn.b-cdn.net/stretching/sdk23o.MP4',
-  '4.webp':  'https://itden-cdn.b-cdn.net/stretching/vd-2.mp4',
-  '8.webp':  'https://itden-cdn.b-cdn.net/stretching/vd-3.mp4',
-  '13.webp': 'https://itden-cdn.b-cdn.net/stretching/vd-4.mp4',
-  '18.webp': 'https://itden-cdn.b-cdn.net/stretching/video2.MP4',
-  '21.webp': 'https://itden-cdn.b-cdn.net/stretching/video4.MP4',
-  '24.webp': 'https://itden-cdn.b-cdn.net/stretching/Instagram_15.04.2026_MiddleSplit_Video.mp4',
-  '25.webp': 'https://itden-cdn.b-cdn.net/stretching/video5.MP4',
-  '27.webp': 'https://itden-cdn.b-cdn.net/stretching/Instagram_15.04.2026_FullSplit_Video.MP4',
-  '29.webp': 'https://itden-cdn.b-cdn.net/stretching/vd-10.mp4',
-  '31.webp': 'https://itden-cdn.b-cdn.net/stretching/feur289aew.mp4',
-  '32.webp': 'https://itden-cdn.b-cdn.net/stretching/vd-11.MP4',
-  '34.webp': 'https://itden-cdn.b-cdn.net/stretching/Splits%20Course%20from%20Zubalenok%20on%20IG.mp4'
+  '5.webp':  'https://itden-cdn.b-cdn.net/stretching/sdk23o.MP4'
 };
 
   // 1. Ініціалізація Swiper Слайдера
@@ -23,7 +11,7 @@ var VIDEO_MAP = {
     if (gallerySwiperEl) {
       var swiper = new Swiper(gallerySwiperEl, {
         slidesPerView: 'auto',
-        spaceBetween: 20,
+        spaceBetween: 10,
         pagination: {
           el: '.s6-pagination',
           clickable: true
@@ -36,6 +24,11 @@ var VIDEO_MAP = {
 
       swiper.on('slideChangeTransitionStart', killAllVideos);
       swiper.on('sliderMove', killAllVideos);
+
+      // Ширина слайдів залежить від картинки, тому перераховуємо Swiper після завантаження кожної
+      gallerySwiperEl.querySelectorAll('.s6-img').forEach(function (img) {
+        if (!img.complete) img.addEventListener('load', function () { swiper.update(); });
+      });
     }
   }
 
