@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (values.length < 3) return;
 
     // Змінено на 48 годин (як у тексті "Just 48 hours")
-    const TOTAL_TIME = 24 * 60 * 60 * 1000;
+    const TOTAL_TIME = 48 * 60 * 60 * 1000;
 
     let startTime = localStorage.getItem(storageKey);
 
